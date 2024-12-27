@@ -1,0 +1,40 @@
+<div class="left-column">
+    <div class="picture">
+        <img src="assets\hank.jpg" width="300" height="200">
+    </div>
+<a class="nav-link" (click)="switchToMe()" routerLink="">Me</a>
+<a class="nav-link" (click)="switchToSkills()" routerLink="Skills">Skills</a>
+<a class="nav-link" (click)="switchToExperience()" routerLink="Experience">Experience</a>
+
+</div>
+<div class="right-content" [ngSwitch]="state">
+    <div *ngSwitchCase="'Me'">
+        <h1>About Me</h1>
+        <p>ASAC Hank Schrader. Assistant Special Agent in Charge of the Albuquerque DEA office. I've dedicated my career to fighting drug cartels and keeping our streets clean. When I'm not busting bad guys, you might find me brewing Schraderbräu or collecting minerals (they're not rocks, Marie!).</p>
+      </div>
+      
+      <div *ngSwitchCase="'Skills'">
+        <h1>Skills</h1>
+        <ul>
+          <li>Expert in drug cartel investigation and interdiction</li>
+          <li>Leadership and team management</li>
+          <li>Tactical operations and surveillance</li>
+          <li>Evidence analysis and case building</li>
+          <li>Superior interrogation techniques</li>
+          <li>Homebrew crafting specialist</li>
+          <li>Advanced mineral identification</li>
+        </ul>
+       </div>
+      
+      <div *ngSwitchCase="'Experience'">
+        <h1>Experience</h1>
+        <h3>DEA - Assistant Special Agent in Charge</h3>
+        <p>Led major investigations into drug trafficking organizations across New Mexico. Spearheaded the Heisenberg investigation. Managed team of field agents and coordinated with local law enforcement.</p>
+        
+        <h3>DEA - Field Agent</h3>
+        <p>Conducted field operations, surveillance, and investigations. Multiple successful busts and seizures. Established strong relationships with informants and local police departments.</p>
+      </div>
+  </div>
+<div>
+    <router-outlet></router-outlet>
+</div>

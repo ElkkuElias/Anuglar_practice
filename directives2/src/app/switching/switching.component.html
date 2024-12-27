@@ -1,0 +1,8 @@
+<button (click)="switchToName()">Name</button>
+<button (click)="switchToJob()">Job</button>
+<button (click)="switchToAge()">Age</button>
+<div [ngSwitch]="state">
+    <div *ngSwitchCase="'Name'">Name is Elias</div>
+    <div *ngSwitchCase="'Job'">Jobless</div>
+    <div *ngSwitchCase="'Age'">22 </div>
+  </div>
