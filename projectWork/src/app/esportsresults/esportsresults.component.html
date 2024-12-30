@@ -1,0 +1,30 @@
+
+<div>
+  <h2>G2 Upcoming Matches</h2>
+  
+
+  
+  <div *ngFor="let match of matches" >
+      <div>
+          <span class="matchup">{{ match.name }}</span>
+          <p></p>
+          <span class="format">{{ match.begin_at | date:'medium' }}</span>
+      </div>
+      
+      <div class="format">
+          {{ match.league.name }} - {{ match.tournament.name }}
+      </div>
+      
+      <div >
+          
+      </div>
+
+      <div>
+          <span class="format">Format: Bo{{ match.number_of_games }}</span>
+          <p></p>
+          
+      </div>
+  </div>
+
+
+</div>

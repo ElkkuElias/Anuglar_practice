@@ -1,0 +1,9 @@
+<h1>Text Editor!</h1>
+    <textarea [style.color]="textColor"
+    [style.backgroundColor]="bgColor"></textarea>
+    <div>
+        <label>Text Color: </label>
+        <input type="color" (input)="onInputChangeColor($event)">
+        <label>Background Color: </label>
+        <input type="color" (input)="onInputChangeBG($event)">
+    </div>

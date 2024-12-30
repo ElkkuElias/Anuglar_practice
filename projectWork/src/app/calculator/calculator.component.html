@@ -1,0 +1,14 @@
+
+    <h1>Calculator</h1>
+    <input (input)="onInputChange($event, 1)"> <!-- 1 and 2 in param refer to which input field is calling the function!!! -->
+    <input (input)="onInputChange($event ,2)">
+    <a>=</a>
+    <a>{{result}}</a>
+    <p></p>
+    <!--3 will refer to a button click!-->
+    <button [class.active]="state === '+'" (click)="stateToPlus();onInputChange($event, 3)">+</button>
+    <button [class.active]="state === '-'" (click)="stateToMinus();onInputChange($event, 3)">-</button>
+    <button [class.active]="state === '*'" (click)="stateToStar();onInputChange($event, 3)">*</button>
+    <button [class.active]="state === '/'" (click)="stateToSlash();onInputChange($event, 3) ">/</button>
+    
+   
